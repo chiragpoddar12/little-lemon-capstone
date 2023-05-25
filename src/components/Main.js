@@ -1,6 +1,8 @@
 function Main() {
-    <main>
-    </main>
+    return(
+        <main>
+        </main>
+    );
 }
 
 export default Main;
