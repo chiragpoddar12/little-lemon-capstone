@@ -24,7 +24,7 @@ header {
   grid-template-columns: 20% 80%;
   grid-column-gap: 4px;
   grid-template-rows: 1fr;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
 }
 
 main {

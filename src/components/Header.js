@@ -1,9 +1,9 @@
 import Nav from './Nav.js'
-
+import logo from './../imgs/logo.png';
 function Header() {
     return(
         <header>
-            <h1>here</h1>
+            <img src={logo} alt={"Little Lemon Restaurant"}/>
             <Nav/>
         </header>
     );
