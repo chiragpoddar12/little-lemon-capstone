@@ -1,6 +1,12 @@
+import CommonHeader from "./CommonHeader";
+
 function OrderOnline(){
     return (
-        <p>Order Online</p>
+        <>
+            <CommonHeader
+                title={"Order Online"}/>
+            <p>Order Online</p>
+        </>
     );
 }
 

@@ -1,6 +1,12 @@
+import CommonHeader from "./CommonHeader";
+
 function About(){
     return (
-        <p>About</p>
+        <>
+            <CommonHeader
+                title={"About Us"}/>
+            <p>About</p>
+        </>
     );
 }
 

@@ -1,6 +1,12 @@
+import CommonHeader from "./CommonHeader";
+
 function BookTable(){
     return (
-        <p>BookTable</p>
+        <>
+            <CommonHeader
+                title={"Book Table"}/>
+            <p>BookTable</p>
+        </>
     );
 }
 

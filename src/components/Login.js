@@ -1,6 +1,12 @@
+import CommonHeader from "./CommonHeader";
+
 function Login(){
     return (
-        <p>Login</p>
+        <>
+            <CommonHeader
+                title={"Login"}/>
+            <p>Login</p>
+        </>
     );
 }
 

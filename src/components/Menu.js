@@ -1,6 +1,12 @@
+import CommonHeader from "./CommonHeader";
+
 function Menu(){
     return (
-        <p>Menu</p>
+        <>
+            <CommonHeader
+                title={"Menu"}/>
+            <p>Menu</p>
+        </>
     );
 }
 
