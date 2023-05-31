@@ -10,7 +10,7 @@ function HomeHeader() {
 
                     <p class={"description"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam ut eros porta placerat. Cras sit amet dui pellentesque, eleifend mi quis, luctus nunc. </p>
                     <Link to={"/book-table"}>
-                        <button>Book Table</button>
+                        <button className={"yellowButton"}>Book Table</button>
                     </Link>
                 </section>
                 <section className={"imgSection-header"}>

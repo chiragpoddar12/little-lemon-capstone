@@ -1,10 +1,11 @@
 import HomeHeader from "./HomeHeader";
+import Specials from "./Specials";
 
 function Home(){
     return (
         <main>
             <HomeHeader/>
-            <p>Home</p>
+            <Specials/>
         </main>
     );
 }

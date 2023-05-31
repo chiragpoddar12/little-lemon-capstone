@@ -61,6 +61,15 @@ ul{
    .hamburger-nav {
       display: none;
    }
+
+   .specialCards{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+   }
+
+   .card{
+      margin-right: 2rem;
+   }
 }
 
 @media (max-width: 799px) {
@@ -74,6 +83,15 @@ ul{
 
    .hamburger-nav {
       display: grid;
+   }
+
+   .specialCards{
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+   }
+
+   .card{
+      margin-bottom: 2rem;
    }
 }
 
@@ -118,9 +136,9 @@ Link:link {
    margin-top: -2rem;
 }
 
-.textSection-header > a > button{
+.yellowButton{
    background-color: #f4ce14;
-   font-size: 2rem;
+   font-size: 1.5rem;
    padding: 0.5rem 1rem;
    border-radius: 16px;
 }
@@ -166,4 +184,27 @@ footer{
 
 .address1{
    margin-bottom: -1.25rem;
+}
+
+.specials{
+   padding: 2rem 6rem;
+}
+
+.card > img {
+   height: 10rem;
+   object-fit: cover;
+   width: 100%;
+}
+
+.card{
+   background-color: #edefee;
+}
+
+.cardLower{
+   background-color: #edefee;
+   padding: 0rem 2rem 2rem 2rem;
+}
+
+.cardLower > h1 {
+   font-size: 1.5rem;
 }
