@@ -81,3 +81,42 @@ Link:link {
    color: black;
    text-align: center;
 }
+
+.jumbotron {
+   background-color: #495e57;
+   color: #fff;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   padding: 2rem 6rem;
+}
+
+.imgSection-header > img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+
+.imgSection-header {
+   max-height: 20rem;
+}
+
+.textSection-header > h1{
+   font-size: 3rem;
+   margin-bottom: -2rem;
+   margin-top: 0;
+}
+
+.textSection-header > h3{
+   font-size: 2.5rem;
+}
+
+.textSection-header > p{
+   margin-top: -2rem;
+}
+
+.textSection-header > a > button{
+   background-color: #f4ce14;
+   font-size: 2rem;
+   padding: 0.5rem 1rem;
+   border-radius: 5px;
+}
