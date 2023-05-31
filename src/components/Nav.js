@@ -4,6 +4,8 @@ import "./../styles/styles.css"
 import logo from "../imgs/logo.png";
 import hamburger from "../imgs/hamburger.png";
 import cross from "../imgs/cross.png";
+
+import { Link } from "react-router-dom";
 function Nav() {
 
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -15,7 +17,9 @@ function Nav() {
     return(
         <nav>
             <nav className={"hamburger-nav"}>
-                <a href={"/"}><img src={logo} alt={"Little Lemon Restaurant"} className={"logoImage"}/></a>
+                <Link to="/">
+                    <img src={logo} alt={"Little Lemon Restaurant"} className={"logoImage"}/>
+                </Link>
                 <button className={"hamburger-button"} onClick={onHamburgerButtonClick}>
                     <img src={ isMobileNavOpen ? cross : hamburger } alt={"Navigation Button"}/>
                 </button>
@@ -24,22 +28,48 @@ function Nav() {
             {
                 isMobileNavOpen ?
                     <menu className={"mobile-navbar"}>
-                        <a className={"navbar-button"} href={"/"}><h3>Home</h3></a>
-                        <a className={"navbar-button"} href={"/"}><h3>About</h3></a>
-                        <a className={"navbar-button"} href={"/"}><h3>Menu</h3></a>
-                        <a className={"navbar-button"} href={"/"}><h3>Reservations</h3></a>
-                        <a className={"navbar-button"} href={"/"}><h3>Order</h3></a>
-                        <a className={"navbar-button"} href={"/"}><h3>Login</h3></a>
+                        <Link to="/" className={"navbar-button"}>
+                            <h3>Home</h3>
+                        </Link>
+                        <Link to="/about" className={"navbar-button"}>
+                            <h3>About</h3>
+                        </Link>
+                        <Link to="/menu" className={"navbar-button"}>
+                            <h3>Menu</h3>
+                        </Link>
+                        <Link to="/book-table" className={"navbar-button"}>
+                            <h3>Reservations</h3>
+                        </Link>
+                        <Link to="/order" className={"navbar-button"}>
+                            <h3>Order</h3>
+                        </Link>
+                        <Link to="/login" className={"navbar-button"}>
+                            <h3>Login</h3>
+                        </Link>
                     </menu> : <></>
             }
             <menu className={"laptop-navbar"}>
-                <a href={"/"}><img src={logo} alt={"Little Lemon Restaurant"} className={"logoImage"}/></a>
-                <a className={"navbar-button"} href={"/"}><h3>Home</h3></a>
-                <a className={"navbar-button"} href={"/"}><h3>About</h3></a>
-                <a className={"navbar-button"} href={"/"}><h3>Menu</h3></a>
-                <a className={"navbar-button"} href={"/"}><h3>Reservations</h3></a>
-                <a className={"navbar-button"} href={"/"}><h3>Order</h3></a>
-                <a className={"navbar-button"} href={"/"}><h3>Login</h3></a>
+                <Link to="/">
+                    <img src={logo} alt={"Little Lemon Restaurant"} className={"logoImage"}/>
+                </Link>
+                <Link to="/" className={"navbar-button"}>
+                    <h3>Home</h3>
+                </Link>
+                <Link to="/about" className={"navbar-button"}>
+                    <h3>About</h3>
+                </Link>
+                <Link to="/menu" className={"navbar-button"}>
+                    <h3>Menu</h3>
+                </Link>
+                <Link to="/book-table" className={"navbar-button"}>
+                    <h3>Reservations</h3>
+                </Link>
+                <Link to="/order" className={"navbar-button"}>
+                    <h3>Order</h3>
+                </Link>
+                <Link to="/login" className={"navbar-button"}>
+                    <h3>Login</h3>
+                </Link>
             </menu>
         </nav>
     );

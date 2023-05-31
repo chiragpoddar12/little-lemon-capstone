@@ -73,3 +73,11 @@
    }
 }
 
+a:visited,
+Link:visited,
+a:link,
+Link:link {
+   text-decoration: none;
+   color: black;
+   text-align: center;
+}
