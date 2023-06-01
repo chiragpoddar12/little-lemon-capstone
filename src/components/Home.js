@@ -1,6 +1,7 @@
 import HomeHeader from "./HomeHeader";
 import Specials from "./Specials";
 import Testinomials from "./Testinomials";
+import RestaurantSection from "./RestaurantSection";
 
 function Home(){
     return (
@@ -8,6 +9,7 @@ function Home(){
             <HomeHeader/>
             <Specials/>
             <Testinomials/>
+            <RestaurantSection/>
         </main>
     );
 }
