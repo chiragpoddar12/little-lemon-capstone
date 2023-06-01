@@ -3,7 +3,7 @@ import {useState} from "react";
 
 function BookingForm(props){
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const [formData, setFormData] = useState({
         name: "",
         email:"",
@@ -33,7 +33,7 @@ function BookingForm(props){
 
     function onSubmitClick(e){
         e.preventDefault();
-        navigate("/");
+        // navigate("/");
     }
 
     return (
@@ -98,7 +98,7 @@ function BookingForm(props){
             <div className={"termsAndCondition"}>
                 <p><strong>By clicking on Confirm below, you agree to be contacted by phone and email</strong></p>
             </div>
-            <button className={"yellowButton"} type={"Submit"} onClick={onSubmitClick}>Confirm</button>
+            <button className={"yellowButton"} type={"Submit"} onClick={onSubmitClick}>Book Now</button>
         </form>
     );
 }
