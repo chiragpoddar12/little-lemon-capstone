@@ -153,6 +153,14 @@ Link:link {
    border-radius: 16px;
 }
 
+.yellowButton:hover{
+   background-color: #495e57;
+   font-size: 1.5rem;
+   padding: 0.5rem 1rem;
+   border-radius: 16px;
+   color: white;
+}
+
 .header-text-center{
    position: absolute;
    top: 50%;
@@ -257,16 +265,27 @@ footer{
    height: 15rem;
 }
 
-
 .articleImg1{
    top: 60%;
    left: 60%;
    transform: translate(-50%, -50%);
 }
 
-
 .articleImg2{
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
+}
+
+input, select, textarea{
+   width: 10rem;
+}
+
+.inputLabel, termsAndCondition{
+   margin-bottom: 1rem;
+}
+
+.bookingForm{
+   text-align: center;
+   margin: 2rem;
 }
