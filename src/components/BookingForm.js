@@ -15,11 +15,31 @@ function BookingForm(props){
         occasion: "",
         comments: ""
     });
+    const [formTouchData, setFormTouch] = useState({
+        name: false,
+        email: false,
+        mobile: false
+    });
+
+    const isInputValid = (input) => input !== "";
+
+    const isFormValid = () =>
+        isInputValid(formData.name) &&
+        isInputValid(formData.email) &&
+        isInputValid(formData.mobile) &&
+        isInputValid(formData.guests);
 
     function onValueChange (e){
         setFormData({
             ...formData,
             [e.target.id]: e.target.value
+        });
+    }
+
+    function onInputBlur(e){
+        setFormTouch({
+            ...formTouchData,
+            [e.target.id]: true
         });
     }
 
@@ -46,17 +66,32 @@ function BookingForm(props){
             <div className={"inputLabel"}>
                 <label htmlFor="name">Full Name:</label>
                 <br/>
-                <input type="text" placeholder={"John Doe"} id="name" value={formData.name} onChange={onValueChange}/>
+                <input type="text" placeholder={"John Doe"} id="name" value={formData.name} onChange={onValueChange} onBlur={onInputBlur}/>
+                {!isInputValid(formData.name) && formTouchData.name && (
+                    <p style={{color: "red"}}>
+                        Please enter valid name
+                    </p>
+                )}
             </div>
             <div className={"inputLabel"}>
                 <label htmlFor="email">Email:</label>
                 <br/>
-                <input type="email" placeholder={"example@test.com"} id="email" value={formData.email} onChange={onValueChange}/>
+                <input type="email" placeholder={"example@test.com"} id="email" value={formData.email} onChange={onValueChange} onBlur={onInputBlur}/>
+                {!isInputValid(formData.email) && formTouchData.email && (
+                    <p style={{color: "red"}}>
+                        Please enter valid email
+                    </p>
+                )}
             </div>
             <div className={"inputLabel"}>
                 <label htmlFor="mobile">Mobile:</label>
                 <br/>
-                <input type="number" placeholder={"(xxx) xx-xxx-xxxx"} id="mobile" value={formData.mobile} onChange={onValueChange}/>
+                <input type="number" placeholder={"(xxx) xx-xxx-xxxx"} id="mobile" value={formData.mobile} onChange={onValueChange} onBlur={onInputBlur}/>
+                {!isInputValid(formData.mobile) && formTouchData.mobile && (
+                    <p style={{color: "red"}}>
+                        Please enter valid mobile
+                    </p>
+                )}
             </div>
             <br/>
             <h2>Table Details</h2>
@@ -102,7 +137,7 @@ function BookingForm(props){
             <div className={"termsAndCondition"}>
                 <p><strong>By clicking on Confirm below, you agree to be contacted by phone and email</strong></p>
             </div>
-            <button className={"yellowButton"} type={"Submit"} onClick={onSubmitClick}>Book Now</button>
+            <button className={"yellowButton"} disabled={!isFormValid()} type={"Submit"} onClick={onSubmitClick}>Book Now</button>
         </form>
     );
 }
