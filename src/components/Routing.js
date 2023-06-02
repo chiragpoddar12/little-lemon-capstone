@@ -5,6 +5,7 @@ import Menu from "./Menu.js";
 import BookTable from "./BookTable.js";
 import OrderOnline from "./OrderOnline.js";
 import Login from "./Login.js";
+import ConfirmationBooking from "./ConfirmationBooking";
 
 function Routing (){
     return (
@@ -15,6 +16,7 @@ function Routing (){
         <Route path="/book-table" element={<BookTable />} />
         <Route path="/order" element={<OrderOnline />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/confirmed" element={<ConfirmationBooking />} />
     </Routes>
     );
 }

@@ -3,7 +3,7 @@ import {useState} from "react";
 
 function BookingForm(props){
 
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         name: "",
         email:"",
@@ -33,7 +33,11 @@ function BookingForm(props){
 
     function onSubmitClick(e){
         e.preventDefault();
-        // navigate("/");
+        if(props.submitAPI(formData))
+        {
+            navigate("/confirmed");
+        }
+
     }
 
     return (
