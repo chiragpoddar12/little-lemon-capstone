@@ -1,19 +1,18 @@
 import CommonHeader from "./CommonHeader";
 import BookingForm from "./BookingForm";
-import {useReducer, useState} from "react";
+import {useEffect, useReducer, useState} from "react";
+import {serverAPI, fetchAPI} from "../serverAPI";
 
 function BookTable(props){
-    const initialTimes = ["12:00", "13.00", "14:00", "15.00", "16.00", "17.00"];
-    const [availableTimes, dispatch] = useReducer(updateTime, initializeTimes());
+    const todaysDate = new Date();
 
-    function updateTime(availableTimes, selectedDate){
-        console.log(selectedDate);
-        return availableTimes;
+    function updateTimes(state, selectedDate) {
+        return (
+            fetchAPI(selectedDate)
+        );
     }
 
-    function initializeTimes(){
-        return initialTimes;
-    }
+    const [availableTimes, dispatch] = useReducer(updateTimes, fetchAPI(todaysDate));
 
     return (
         <>

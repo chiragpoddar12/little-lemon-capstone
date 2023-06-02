@@ -28,7 +28,7 @@ function BookingForm(props){
             ...formData,
             [e.target.id]: e.target.value
         });
-        props.updateTimes(e.target.value)
+        props.updateTimes(new Date(e.target.value));
     }
 
     function onSubmitClick(e){
